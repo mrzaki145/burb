@@ -1,0 +1,180 @@
+:root {
+  // font-families
+  --ff-body: "Neue Montreal", sans-serif;
+  --ff-heading: "Ginto Nord", sans-serif;
+
+  // colors
+  --clr-black: #000;
+  --clr-white: #fff;
+  --clr-grey: #f4f4f4;
+  --clr-green: #afd7b3;
+  --clr-green-light: #ceefd0;
+  --clr-pink: #fbc5c4;
+  --clr-pink-light: #ffe1e1;
+  --clr-orange: #f0b38c;
+  --clr-orange-light: #ffd6c0;
+
+  // gradient
+  --gradient-green: linear-gradient(
+    327deg,
+    var(--clr-green) 35.07%,
+    var(--clr-green-light) 56.13%
+  );
+  --gradient-pink: linear-gradient(
+    180deg,
+    var(--clr-pink),
+    var(--clr-pink-light) 50%
+  );
+  --gradient-orange: linear-gradient(
+    280deg,
+    var(--clr-orange),
+    var(--clr-orange-light)
+  );
+
+  // font-size
+  --fz-0: 0.9375rem; // 15
+  --fz-1: 1rem; // 16
+  --fz-2: 1.125rem; // 18
+  --fz-3: 1.25rem; // 20
+  --fz-4: 1.5rem; // 24
+  --fz-5: 2rem; // 32
+  --fz-6: 2.5rem; // 40
+  --fz-7: 4.5rem; // 72
+  --fz-8: 5rem; // 80
+  --fz-9: 5.625rem; // 96
+  --fz-100: 6.25rem; // 100
+  --fz-10: 7rem; // 112
+  --fz-11: 7.5rem; // 120
+  --fz-12: 8.75rem; // 140
+  --fz-13: 10rem; // 160
+  --fz-14: 12.5rem; // 200
+
+  // sizes
+  --size-000: -0.5rem;
+  --size-00: -0.25rem;
+  --size-0: 0.25rem;
+  --size-1: 0.5rem;
+  --size-2: 0.75rem;
+  --size-3: 1rem;
+  --size-4: 1.25rem;
+  --size-5: 1.5rem;
+  --size-6: 1.75rem;
+  --size-7: 2rem;
+  --size-8: 3rem;
+  --size-9: 4rem;
+  --size-10: 5rem;
+  --size-11: 7.5rem;
+  --size-12: 10rem;
+  --size-13: 15rem;
+  --size-14: 20rem;
+  --size-15: 30rem;
+  --container-px: var(--size-3);
+  @media (--md-n-above) {
+    --container-px: var(--size-7);
+  }
+  @media (--xl-n-above) {
+    --container-px: var(--size-8);
+  }
+
+  // border
+  --brdr-white: 1px solid hsla(0, 0%, 100%, 0.5);
+  --brdr-gray: 1px solid hsla(0, 0%, 100%, 0.1);
+  // radius
+  --radius-xm: 8px;
+  --radius-sm: 16px;
+  --radius-md: 24px;
+  --radius-round: 100vmax;
+
+  // breakpoints
+  --bp-md: 47.9375em; // 767
+
+  // animatein
+  --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+  --animation-fade-in: fade-in 0.5s var(--ease-3);
+  --animation-fade-out: fade-out 0.5s var(--ease-3);
+}
+
+// @custom-media --motionOK (prefers-reduced-motion: no-preference);
+// @custom-media --motionNotOK (prefers-reduced-motion: reduce);
+// @custom-media --opacityOK (prefers-reduced-transparency: no-preference);
+// @custom-media --opacityNotOK (prefers-reduced-transparency: reduce);
+// @custom-media --useDataOK (prefers-reduced-data: no-preference);
+// @custom-media --useDataNotOK (prefers-reduced-data: reduce);
+
+// @custom-media --OSdark (prefers-color-scheme: dark);
+// @custom-media --OSlight (prefers-color-scheme: light);
+
+// @custom-media --highContrast (prefers-contrast: more);
+// @custom-media --lowContrast (prefers-contrast: less);
+
+// @custom-media --portrait (orientation: portrait);
+// @custom-media --landscape (orientation: landscape);
+
+// @custom-media --HDcolor (dynamic-range: high);
+
+// @custom-media --touch (hover: none) and (pointer: coarse);
+// @custom-media --stylus (hover: none) and (pointer: fine);
+// @custom-media --pointer (hover) and (pointer: coarse);
+// @custom-media --mouse (hover) and (pointer: fine);
+
+// xxs -> 240
+@custom-media --xxs-only (0px <= width <= 15em);
+@custom-media --xxs-n-above (width >= 15em);
+@custom-media --xxs-n-below (width <= 15em);
+@custom-media --xxs-phone (--xxs-only) and (--portrait);
+
+// xs -> 360
+@custom-media --xs-only (15em <= width <= 22.5em);
+@custom-media --xs-n-above (width >= 22.5em);
+@custom-media --xs-n-below (width <= 22.5em);
+@custom-media --xs-phone (--xs-only) and (--portrait);
+
+// sm -> 480
+@custom-media --sm-only (22.5em <= width <= 30em);
+@custom-media --sm-n-above (width >= 30em);
+@custom-media --sm-n-below (width <= 30em);
+@custom-media --sm-phone (--sm-only) and (--portrait);
+
+// md -> 768
+@custom-media --md-only (30em <= width <= 48em);
+@custom-media --md-n-above (width >= 48em);
+@custom-media --md-n-below (width <= 48em);
+@custom-media --md-phone (--md-only) and (--portrait);
+
+// lg -> 1024
+@custom-media --lg-only (48em <= width <= 64em);
+@custom-media --lg-n-above (width >= 64em);
+@custom-media --lg-n-below (width <= 64em);
+@custom-media --lg-phone (--lg-only) and (--portrait);
+
+// desktop -> 1280
+@custom-media --desktop-only (64em <= width <= 80em);
+@custom-media --desktop-n-above (width >= 80em);
+@custom-media --desktop-n-below (width <= 80em);
+@custom-media --desktop-phone (--lg-only) and (--portrait);
+
+// xl -> 1440
+@custom-media --xl-only (80em <= width <= 90em);
+@custom-media --xl-n-above (width >= 90em);
+@custom-media --xl-n-below (width <= 90em);
+
+// xxl -> 1920
+@custom-media --xxl-only (90em <= width <= 120em);
+@custom-media --xxl-n-above (width >= 120em);
+@custom-media --xxl-n-below (width <= 120em);
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0, 100;
+  }
+}

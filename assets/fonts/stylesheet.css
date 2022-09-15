@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('NeueMontreal-Regular.woff2') format('woff2'),
+        url('NeueMontreal-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('NeueMontreal-Bold.woff2') format('woff2'),
+        url('NeueMontreal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ginto Nord';
+    src: url('GintoNord-Regular.woff2') format('woff2'),
+        url('GintoNord-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ginto Nord';
+    src: url('GintoNord-Black.woff2') format('woff2'),
+        url('GintoNord-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

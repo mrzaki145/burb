@@ -1,0 +1,89 @@
+@import "../fonts/stylesheet.css";
+@import "./props";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: initial;
+}
+
+body {
+  line-height: 1.5;
+  font-size: var(--fz-2);
+  font-family: var(--ff-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  font-weight: 900;
+  font-family: var(--ff-heading);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  isolation: isolate;
+}
+
+.container {
+  max-width: 1548px;
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+// components
+@import "./components/link";
+@import "./components/btn";
+@import "./components/marquee";
+@import "./components/card";
+
+// structure
+@import "./structure/nav";
+@import "./structure/header";
+@import "./structure/sections";
+@import "./structure/footer";

@@ -1,0 +1,37 @@
+.marquee {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  margin-block-start: var(--size-8);
+  color: hsla(0, 0%, 100%, 0.4);
+  @media (--lg-n-above) {
+    margin-block-start: var(--size-11);
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: marquee 50s linear infinite running;
+  }
+
+  &__text {
+    font-size: var(--fz-1);
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: inherit;
+
+    &:not(:last-child) {
+      margin-inline-end: var(--size-9);
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}

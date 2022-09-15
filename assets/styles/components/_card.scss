@@ -1,0 +1,83 @@
+.card {
+  --bg: var(--clr-grey);
+  --px: var(--size-5);
+  --py: var(--size-7);
+  display: flex;
+  gap: var(--py);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--py) var(--px);
+  background-color: var(--bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out;
+  @media (--md-n-above) {
+    --px: var(--size-6);
+    --py: var(--size-8);
+  }
+  @media (--lg-n-above) {
+    --px: var(--size-8);
+    --py: var(--px);
+  }
+  @media (--xl-n-above) {
+    --px: var(--size-9);
+  }
+
+  &:hover {
+    --bg: var(--bg-hover, var(--clr-grey));
+  }
+
+  &--wide {
+    padding: 0;
+    // gap: 0;
+    grid-column: 1 / -1;
+    @media (--lg-n-above) {
+      flex-direction: row;
+    }
+
+    .card__img {
+      flex: 1 1 auto;
+      object-fit: cover;
+      object-position: left;
+    }
+
+    .card__content {
+      padding: var(--py) var(--px) 0;
+      @media (--sm-n-above) {
+        max-width: 85%;
+      }
+      @media (--lg-n-above) {
+        max-width: 39%;
+        align-self: center;
+        padding-inline-end: 0;
+        padding-block-end: var(--py);
+      }
+    }
+  }
+
+  & > * {
+    order: 1;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    h3 {
+      font-size: var(--fz-5);
+      font-family: var(--ff-body);
+
+      @media (--lg-n-above) {
+        font-size: var(--fz-6);
+      }
+    }
+
+    p {
+      margin-block: var(--size-4) var(--size-5);
+      @media (--lg-n-above) {
+        font-size: var(--fz-3);
+      }
+    }
+  }
+}

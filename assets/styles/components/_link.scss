@@ -1,0 +1,45 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--clr-black);
+  text-decoration: none;
+  vertical-align: middle;
+  font-weight: 700;
+
+  &__icn {
+    width: 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline-start: var(--size-1);
+  }
+
+  .dot {
+    flex: 1 1 auto;
+    width: var(--size);
+    height: var(--size);
+    transition: 0.25s cubic-bezier(0.5, -0.9, 0.1, 1.5);
+    transition-property: width, height;
+    &:nth-child(1) {
+      --size: 4px;
+    }
+    &:nth-child(2) {
+      --size: 6px;
+    }
+    &:nth-child(3) {
+      --size: 8px;
+    }
+  }
+
+  &:hover {
+    .dot {
+      &:nth-child(1) {
+        --size: 8px;
+      }
+      &:nth-child(3) {
+        --size: 4px;
+      }
+    }
+  }
+}
