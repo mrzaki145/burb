@@ -66,6 +66,15 @@ select {
   font: inherit;
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background-color: var(--clr-black);
+  transform-origin: top center;
+  transform: scaleY(100%);
+}
+
 #root {
   isolation: isolate;
 }

@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^0.1.18",
+    "gsap": "file:gsap.tgz",
     "headroom.js": "^0.12.0",
     "matchmedia-polyfill": "^0.3.2"
   },

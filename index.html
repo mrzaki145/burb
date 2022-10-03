@@ -7,11 +7,15 @@
 
     <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
     <title>Burb &mdash; How Creators Grow Community</title>
+
+    <link rel="stylesheet" href="/assets/styles/main.scss" />
   </head>
 
   <body>
+    <div class="overlay"></div>
+
     <div id="root">
-      <div id="js_nav" class="nav">
+      <div id="js_nav" class="nav" data-list-state="closed">
         <div class="container">
           <div id="js_navContent" class="nav__content">
             <a class="nav__logo-link" href="/">
@@ -28,9 +32,6 @@
               class="nav__toggler"
               type="button"
               tabindex="0"
-              aria-pressed="false"
-              aria-label="menu"
-              aria-haspopup="menu"
               aria-expanded="false"
               aria-controls="js_navList"
             >
@@ -435,12 +436,12 @@
 
                 <img
                   class="card__img"
-                  src="/images/chart2x-p-800.webp"
+                  src="/images/chart2x-p-800.png"
                   loading="lazy"
                   width="896"
                   srcset="
-                    /images/chart2x-p-800-p-500.webp 500w,
-                    /images/chart2x-p-800.webp       800w
+                    /images/chart2x-p-800-p-500.png 500w,
+                    /images/chart2x-p-800.png       800w
                   "
                   sizes="(max-width: 991px) 100vw, 41vw"
                   alt=""

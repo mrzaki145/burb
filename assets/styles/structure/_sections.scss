@@ -8,6 +8,9 @@
     background-position: center -15px;
 
     @media (--lg-n-above) {
+      padding-block: var(--size-13);
+    }
+    @media (--desktop-n-above) {
       padding-block: var(--size-13) var(--size-11);
     }
   }
@@ -142,7 +145,7 @@
           inset: 100% 0 auto 0;
           height: 120px;
           background-image: url("/images/dot.svg");
-          background-size: contain;
+          background-size: 100% auto;
           background-position: left top -7px;
           background-repeat: repeat-x;
         }
@@ -211,14 +214,15 @@
       background-color: var(--clr-white);
       border-radius: var(--radius-sm);
       overflow: hidden;
-      transition: transform 0.4s ease;
+      // will-change: transform;
+      // transition: transform 0.4s ease;
       @media (--md-n-above) {
         border-radius: var(--radius-md);
       }
 
-      &:hover {
-        transform: translateY(-1rem);
-      }
+      // &:hover {
+      //   transform: translateY(-1rem);
+      // }
 
       &:nth-child(1) {
         --clr: #1a365d;
@@ -463,13 +467,30 @@
     .steps {
       display: grid;
       gap: var(--size-5);
+      justify-content: center;
       @media (--lg-n-above) {
         gap: var(--size-7);
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .step {
-        justify-content: flex-start;
+      .card {
+        &__img {
+          max-width: 380px;
+          justify-self: center;
+        }
+
+        h3 {
+          font-size: var(--fz-5);
+          @media (--desktop-n-above) {
+            font-size: var(--fz-6);
+          }
+        }
+        p {
+          font-size: var(--fz-3);
+          @media (--desktop-n-above) {
+            font-size: var(--fz-4);
+          }
+        }
       }
 
       p {
@@ -496,7 +517,6 @@
 
   &__avatars {
     display: flex;
-    gap: var(--size-4);
     align-items: center;
     justify-content: center;
     list-style-type: none;
@@ -516,6 +536,14 @@
       opacity: 0.75;
       border-radius: var(--radius-round);
       overflow: hidden;
+
+      &:not(:last-child) {
+        margin-inline-end: var(--size-4);
+        @media (--lg-n-above) {
+          margin-inline-end: 0;
+          margin-block-end: var(--size-0);
+        }
+      }
 
       &:nth-child(1) {
         --clr: var(--clr-green);
@@ -545,7 +573,7 @@
 
       &.active {
         opacity: 1;
-        transform: scale(1.1);
+        // transform: scale(1.1);
         transition: 0.4s ease-out;
         transition-property: transform, opacity;
 
